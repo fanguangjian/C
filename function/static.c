@@ -1,7 +1,7 @@
 /*
  * @Author       : G.F
  * @Date         : 2021-04-18 00:47:13
- * @LastEditTime : 2021-04-18 01:00:29
+ * @LastEditTime : 2021-04-18 01:06:37
  * @LastEditors  : G.F
  * @FilePath     : /C/function/static.c
  * @Description  : 普通全局变量 0 , 静态全部变量 0, 普通局部变量 随机, 静态局部变量0
@@ -15,8 +15,8 @@
     int a; //普通局部变量    
     static int num; //静态局部变量  
     
-    printf("a = %d\n", a);
-    printf("num = %d\n", num);
+    printf("a = %d\n", a); ///0
+    printf("num = %d\n", num); // 0
   }
  
 
