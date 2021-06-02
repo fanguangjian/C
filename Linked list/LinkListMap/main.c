@@ -26,10 +26,10 @@ void link_create_head(STU **p_head, STU *p_new){
 
 // link list map
 void link_print(STU *head){
-    STU *p_mov; 
-    //定义新的指针保存链表的首地址，防止使用head改变原本链表 
+    STU *p_mov;
+    //定义新的指针保存链表的首地址，防止使用head改变原本链表
     p_mov = head;
-     //当指针保存最后一个结点的指针域为NULL时，循环结束 
+     //当指针保存最后一个结点的指针域为NULL时，循环结束
     while(p_mov!=NULL){
         //先打印当前指针保存结点的指针域
        printf("num=%d score=%d name:%s\n",p_mov->num,p_mov->score,p_mov->name);
@@ -48,8 +48,8 @@ int main()
        p_new = (STU*)malloc(sizeof(STU)); //申请第一个节点
        printf("num, score, name:\n"); //赋值
        scanf("%d %d %s",&p_new->num,&p_new->score,p_new->name);
-       
-       link_creat_head(&head,p_new); //将新节点加入链表
+
+       link_create_head(&head,p_new); //将新节点加入链表
 
    }
    link_print(head);

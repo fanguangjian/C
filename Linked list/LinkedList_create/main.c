@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
 
 // 定义节点结构体
@@ -34,7 +34,7 @@ int main()
    for(i=0; i<num; i++){
        p_new = (STU*)malloc(sizeof(STU)); //申请第一个节点
        printf("num, score, name:\n"); //赋值
-       scanf("%d %d %s",&p_new‐>num,&p_new‐>score,p_new‐>name);
+       scanf("%d %d %s",&p_new->num,&p_new->score,p_new->name);
        
        link_creat_head(&head,p_new); //将新节点加入链表
 
