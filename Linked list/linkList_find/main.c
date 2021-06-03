@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//identify struction
-
 typedef struct student{
     int num;
     int score;
@@ -53,6 +51,20 @@ void link_free(STU **p_head){
     }
 }
 
+//find
+STU * link_search_num(STU *head, int num){
+    STU *p_mov;
+    p_mov=head;
+    while(p_mov!=NULL){
+        if(p_mov->num == num){
+            return p_mov;
+        }
+        p_mov=p_mov->next;
+    }
+    return NULL;
+
+}
+
 
 
 int main()
@@ -71,7 +83,23 @@ int main()
 
    }
    link_print(head);
-   link_free(&head);
+
+   //seek
+    #if 1
+       STU *pb;
+       while(1){
+           printf("Please input num\n");
+           scanf("%d", &num);
+           pb=link_search_num(head,num);
+           if(pb!=NULL){
+               printf("Find it");
+//               printf("找到了 num=%d score=%d name:%s\n",pb‐>num,pb‐>score,pb‐>name);
+           }else{
+               printf("Not find");
+           }
+       }
+    #endif
+    link_free(&head);
 
     return 0;
 }
