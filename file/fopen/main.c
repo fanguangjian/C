@@ -18,6 +18,9 @@ int main()
          return -1;
     }
 
+    //use fclose() 关闭函数
+    fclose(fp);
+
 
     return 0;
 }
